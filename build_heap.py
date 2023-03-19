@@ -1,7 +1,3 @@
-
-# python3
-
-
 def build_heap(data):
     n=len(data)
     swaps = []
@@ -44,7 +40,7 @@ def s_down(i,data,swaps):
 
 
 def main():
-    
+
     # input from keyboard
     #n = int(input().strip())
     #data = list(map(int, input().split()))
@@ -58,18 +54,29 @@ def main():
         u_data=input()
         data=list(map(int, u_data.split(" ")))
         assert len(data)==n 
+
+    elif "F" in sort_type:
+        fl=input()
+        if "a" in fl:
+            return
+        with open(f"./test/{fl}",mode="r") as fl:
+            n=int(fl.readline())
+            data=list(map(int, fl.readline().split(" ")))
+        assert len(data)==n 
+
     else:
         return
 
-    elif sort_type=="H":
-        swaps = build_heap(data)
-        assert len(swaps)<=2*n-1
+    saraksts=[[]for i in range(n)]
+    for i in range(n):
+        if data[i]<n:
+            saraksts[data[i]].append(i)
+    swaps=build_heap(data)
         # output all swaps
-        print(len(swaps))
-        for i, j in swaps:
-            print(i, j)
-    else:
-        print("Invalid sort type")
+    print(len(swaps))
+    for i, j in swaps:
+        print(i, j)
+
 
 
 if __name__ == "__main__":
