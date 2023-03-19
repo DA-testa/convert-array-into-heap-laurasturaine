@@ -17,10 +17,20 @@ def build_heap(data):
             min_index=r 
 
         if i!=min_index:
-            swaps.append((min_index,i))
+            swaps.append((i,min_index))
             data[i],data[min_index]=data[min_index],data[i]
-        else:
-             break
+            while min_index<n//2:
+                l=2*min_index+1
+                r=2*min_index+2
+                if r<n and data[r]<data[min_index]:
+                    min_index=r 
+                if l<n and data[l]<data[min_index]:
+                    min_index=l 
+                if i!=min_index:
+                swaps.append((min_index,i))
+                data[i], data[min_index]=data[min_index], data[i]
+                else:
+                    break
     return swaps
 
 
