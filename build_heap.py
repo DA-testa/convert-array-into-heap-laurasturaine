@@ -40,12 +40,12 @@ def main():
    
 
     # checks if lenght of data is the same as the said lenght
-    i_type=input("enter input method I/F: ")
+    i_type=input()
 
 
     if "I" in i_type:
-        n = int(input("enter number of elements: "))
-        data=list(map(int, input("enter the elements: ").split()))
+        n = int(input())
+        data=list(map(int, input().split()))
 
     if "F" in i_type:
         fn=input("eneter the filename")
