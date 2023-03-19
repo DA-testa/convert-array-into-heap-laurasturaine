@@ -11,9 +11,9 @@ def down(data,i,n,swaps):
     min_index=i 
     l=2*i+1
     r=2*i+2
-    if l<n and data[l]<data[i]:
+    if l<n and data[l]<data[min_index]:
         min_index=l 
-    if r<n and data[r]<data[i]:
+    if r<n and data[r]<data[min_index]:
         min_index=r 
 
     if i!=min_index:
@@ -48,7 +48,7 @@ def main():
         data=list(map(int, input().split()))
 
     if "F" in i_type:
-        fn=input("eneter the filename")
+        fn=input("Enter the filename")
         with open(f"tests/{fn}") as file:
             n=int(file.readline())
             data=list(map(int, file.readline().split()))
