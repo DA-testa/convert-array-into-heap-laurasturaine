@@ -44,7 +44,7 @@ def main():
 
 
     if "I" in i_type:
-        n = int(input("eneter number of elements: "))
+        n = int(input("enter number of elements: "))
         data=list(map(int, input("enter the elements: ").split()))
 
     if "F" in i_type:
