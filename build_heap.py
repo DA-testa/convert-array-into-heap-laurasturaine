@@ -51,18 +51,12 @@ def main():
     if sort_type=="I":
         pass
     elif sort_type=="H":
-
-
-    #assert len(data) == n
-
-  
         swaps = build_heap(data)
         assert len(swaps)<=2*n-1
         # output all swaps
         print(len(swaps))
         for i, j in swaps:
             print(i, j)
-
     else:
         print("Invalid sort type")
 
