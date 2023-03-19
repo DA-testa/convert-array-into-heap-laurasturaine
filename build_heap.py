@@ -46,22 +46,25 @@ def main():
     data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
-    assert len(data) == n
+    sort_type=input()
 
-    # calls function to assess the data 
-    # and give back all swaps
-    swaps = build_heap(data)
-    assert len(swaps)<=2*n-1
-   
-
-    # TODO: output how many swaps were made, 
-    # this number should be less than 4n (less than 4*len(data))
+    if sort_type=="I":
+        pass
+    elif sort_type=="H":
 
 
-    # output all swaps
-    print(len(swaps))
-    for i, j in swaps:
-        print(i, j)
+    #assert len(data) == n
+
+  
+        swaps = build_heap(data)
+        assert len(swaps)<=2*n-1
+        # output all swaps
+        print(len(swaps))
+        for i, j in swaps:
+            print(i, j)
+
+    else:
+        print("Invalid sort type")
 
 
 if __name__ == "__main__":
