@@ -46,7 +46,7 @@ def main():
     data = list(map(int, input().split()))
 
     # checks if lenght of data is the same as the said lenght
-    sort_type=input()
+    sort_type=input().strip()
 
     if sort_type=="I":
         pass
