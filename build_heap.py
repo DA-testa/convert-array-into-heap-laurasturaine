@@ -6,7 +6,6 @@ def build_heap(data):
         down(data,i,n,swaps)
     return swaps
 
-
 def down(data,i,n,swaps):
     min_index=i 
     l=2*i+1
@@ -15,7 +14,6 @@ def down(data,i,n,swaps):
         min_index=l 
     if r<n and data[r]<data[min_index]:
         min_index=r 
-
     if i!=min_index:
         swaps.append((i,min_index))
         data[i],data[min_index]=data[min_index],data[i]
@@ -37,11 +35,7 @@ def down(data,i,n,swaps):
 
 def main():
 
-   
-
-    # checks if lenght of data is the same as the said lenght
     i_type=input()
-
 
     if "I" in i_type:
         n = int(input())
@@ -59,7 +53,6 @@ def main():
     print(len(swaps))
     for i, j in swaps:
         print(i, j)
-
 
 
 if __name__ == "__main__":
